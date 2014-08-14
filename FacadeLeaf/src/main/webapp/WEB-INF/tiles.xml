@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="facadeleaf.baseLayout" template="/WEB-INF/tiles/layouts/facadeLeaf/baseLayout.jsp">
+		<!-- <put-attribute name="title" value="Tiles tutorial homepage" /> -->
+		<put-attribute name="left_crumbs" value="/WEB-INF/tiles/layouts/facadeLeaf/left_crumbs.jsp" />
+		<put-attribute name="primary-content" value="" />
+	</definition>
+    
+    <!-- 测试页面 -->
+	<definition name="test-tiles" extends="facadeleaf.baseLayout">
+        <put-attribute name="title" value="tiles测试页" />
+		<put-attribute name="primary-content" value="/WEB-INF/jsp/tiles-test.jsp" />
+	</definition>
+
+</tiles-definitions>

@@ -3,4 +3,5 @@ encoding//src/main/resources/config/mybatis/datasource-setting.properties=UTF-8
 encoding//src/main/resources/config/spring/evn-setting.properties=UTF-8
 encoding//src/main/resources/log4j.properties=UTF-8
 encoding//src/main/webapp/WEB-INF/jsp/index.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/tiles/footer.jsp=UTF-8
 encoding/<project>=UTF-8

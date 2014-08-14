@@ -9,7 +9,7 @@ public class TestController {
     
     @RequestMapping(value="*")
     public String test() {
-        //forward /jsp/index.jsp
-        return "index";
+        //forward /jsp/test.jsp
+        return "test-tiles";
     }
 }

@@ -92,7 +92,7 @@
     </servlet-mapping>
     <!--end-->
 
-
+    <!-- 开启el表达式 -->
 	<jsp-config>
 		<jsp-property-group>
 			<url-pattern>*.jsp</url-pattern>
