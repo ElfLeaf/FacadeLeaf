@@ -18,6 +18,7 @@
 		<!-- 中央仓库检索地址http://search.maven.org/#browse -->
 
 		<!-- spring依赖配置开始 -->
+		<!-- spring aop + aspectj -->
 		<dependency>
 			<!-- spring必须包 -->
 			<!-- 基于AOP的Spring特性如声明型事务管理，如果需要使用aop还需要引入aopalliance，aspectjrt，aspectjweaver这3个jar包 -->
@@ -25,6 +26,17 @@
 			<artifactId>spring-aop</artifactId>
 			<version>3.2.4.RELEASE</version>
 		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.8.1</version>
+		</dependency>
+		
 		<dependency>
 			<!-- spring必须包，它包含访问配置文件、创建和管理bean以及进行（IoC/DI）操作相关的所有类 -->
 			<groupId>org.springframework</groupId>
@@ -94,13 +106,8 @@
 			<version>3.2.4.RELEASE</version>
 		</dependency>
 
-		<dependency>
-			<!-- spring扩展包 -->
-			<!-- 对Hibernate 3.0/3.1/3.2的支持。 外部依赖spring-jdbc，Hibernate3，(spring-web)。 -->
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-hibernate3</artifactId>
-			<version>2.0.8</version>
-		</dependency>
+		<!-- <dependency> spring扩展包 对Hibernate 3.0/3.1/3.2的支持。 外部依赖spring-jdbc，Hibernate3，(spring-web)。 <groupId>org.springframework</groupId> <artifactId>spring-hibernate3</artifactId> 
+			<version>2.0.8</version> </dependency> -->
 		<dependency>
 			<!-- spring扩展包 -->
 			<!-- 这个jar 文件包含对Spring 对JDBC 数据访问进行封装的所有类。 外部依赖spring-beans，spring-dao。 -->
@@ -129,37 +136,14 @@
 
 
 		<!-- hibernate依赖开始 -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>4.1.6.Final</version>
-		</dependency>
+		<!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-core</artifactId> <version>4.1.6.Final</version> </dependency> -->
 
-		<dependency>
-			<!-- hibernate必要事务依赖 -->
-			<groupId>javax.transaction</groupId>
-			<artifactId>jta</artifactId>
-			<version>1.1</version>
-		</dependency>
-		<dependency>
-			<!-- MySQL驱动 -->
-			<!-- 在使用JDBC连接数据库时，需要使用相应的驱动程序。 不同的数据库、不同的版本，其驱动程序也不同，也可能有多个驱动程序可用。 这些驱动程序都是一个jar的包，通常有该数据库的发布厂商或其他的机构提供。 -->
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.21</version>
-		</dependency>
-		<dependency>
-			<!-- Hibernate用它来实现PO字节码的动态生成，非常核心的库，必须使用的jar包 -->
-			<groupId>cglib</groupId>
-			<artifactId>cglib</artifactId>
-			<version>3.0</version>
-		</dependency>
-		<dependency>
-			<!-- 数据源必要包 ，在spring配置文件中指定hibernate数据源的必要包 -->
-			<groupId>commons-dbcp</groupId>
-			<artifactId>commons-dbcp</artifactId>
-			<version>1.2.2</version>
-		</dependency>
+		<!-- <dependency> hibernate必要事务依赖 <groupId>javax.transaction</groupId> <artifactId>jta</artifactId> <version>1.1</version> </dependency> -->
+		<!-- <dependency> MySQL驱动 在使用JDBC连接数据库时，需要使用相应的驱动程序。 不同的数据库、不同的版本，其驱动程序也不同，也可能有多个驱动程序可用。 这些驱动程序都是一个jar的包，通常有该数据库的发布厂商或其他的机构提供。 <groupId>mysql</groupId> 
+			<artifactId>mysql-connector-java</artifactId> <version>5.1.21</version> </dependency> -->
+		<!-- <dependency> Hibernate用它来实现PO字节码的动态生成，非常核心的库，必须使用的jar包 <groupId>cglib</groupId> <artifactId>cglib</artifactId> <version>3.0</version> </dependency> -->
+		<!-- <dependency> 数据源必要包 ，在spring配置文件中指定hibernate数据源的必要包 <groupId>commons-dbcp</groupId> <artifactId>commons-dbcp</artifactId> <version>1.2.2</version> 
+			</dependency> -->
 		<!-- hibernate依赖结束 -->
 
 		<!-- log4j依赖开始 -->
@@ -180,20 +164,69 @@
 		<!-- junit依赖结束 -->
 
 		<!-- spring-junit测试用，需要 servlet-api -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>6.0.41</version>
+		</dependency> -->
+
+		<!-- mybatis依赖开始 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.2.3</version>
 		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<!-- 配合ASM提供效率代理类 -->
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<!-- 连接池 -->
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+		    <!-- c3p0连接池 -->
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.1.2</version>
+		</dependency>
+		<dependency>
+			<!-- MySQL驱动 在使用JDBC连接数据库时，需要使用相应的驱动程序。 不同的数据库、不同的版本， 其驱动程序也不同，也可能有多个驱动程序可用。 这些驱动程序都是一个jar的包，通常有该数据库的发布厂商或其他的机构提供。 -->
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.21</version>
+		</dependency>
+		<!-- mybatis依赖结束 -->
 
 
-
+		<!--tiles jar 依赖 -->
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-extras</artifactId>
+			<version>3.0.1</version>
+		</dependency>  
+		
 
 		<!-- 其他常用开发包 -->
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
 		</dependency>
 		<!-- 其他常用开发包结束 -->
 	</dependencies>
