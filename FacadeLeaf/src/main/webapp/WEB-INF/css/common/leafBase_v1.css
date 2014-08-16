@@ -1,77 +1,74 @@
 
 body {
-	background-color:#666666;
-	margin:0px;
+    margin: 0;
+    background-color: #666;
 }
-
 #container {
-	text-align:center;
+    text-align: center;
 }
-
-
 #left_crumbs {
-	  position:fixed;
-	  height:100%;
-	  width:100px;
-	  background-color:white;
+    position: fixed;
+    width: 100px;
+    height: 100%;
+    background-color: white;
 }
-
+.transparent_30 {
+    opacity: .3;
+    filter: alpha(opacity=30);
+    -moz-opacity: .3;
+    -khtml-opacity: .3;
+}
 .transparent_90 {
-	 filter:alpha(opacity=90);  
-      -moz-opacity:0.9;  
-      -khtml-opacity: 0.9;  
-      opacity: 0.9;  
+    opacity: .9;
+    filter: alpha(opacity=90);
+    -moz-opacity: .9;
+    -khtml-opacity: .9;
 }
-
 .transparent_97 {
-	 filter:alpha(opacity=97);  
-      -moz-opacity:0.97;  
-      -khtml-opacity: 0.97;  
-      opacity: 0.97;  
+    opacity: .97;
+    filter: alpha(opacity=97);
+    -moz-opacity: .97;
+    -khtml-opacity: .97;
 }
-
-#left_crumbs ul{
-	margin:0px;
-	padding:0px;
+#left_crumbs ul {
+    margin: 0;
+    padding: 0;
 }
-
-#left_crumbs ul li{
-	margin:0px;
-	padding:0px;
-	list-style:none;
-	height:100px;
-	border-bottom:2px solid #666666;
-	text-align:center;
-	line-height:170px;
-	background-repeat:no-repeat;	
+#left_crumbs ul li {
+    line-height: 170px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    border-bottom: 2px solid #666;
+    background-repeat: no-repeat;
 }
-
-#left_crumbs ul li:hover{
-	color:white;
-	border-top:3px solid #666666;
-	border-left:3px solid #666666;
-	background-color:#76DDFF;
-	line-height:180px;
+#left_crumbs ul li: hover {
+    line-height: 180px;
+    color: white;
+    border-top: 3px solid #666;
+    border-left: 3px solid #666;
+    background-color: #76ddff;
 }
-
 .font_w900 {
-	font-weight:900
+    font-weight: 900;
 }
-
 #li_login {
-	background-image:url("/static/images/common/login_icon.png");
+    background-image: url('/static/images/common/login_icon.png');
 }
-
-#li_login:hover{
-	background-image:url("/static/images/common/login_icon_h.png");
+#li_login: hover {
+    background-image: url('/static/images/common/login_icon_h.png');
 }
-
-
 #li_setting {
-	background-image:url("/static/images/common/setting_icon.png");
+    background-image: url('/static/images/common/setting_icon.png');
 }
-
-#li_setting:hover{
-	background-image:url("/static/images/common/setting_icon_h.png");
-	
+#li_setting: hover {
+    background-image: url('/static/images/common/setting_icon_h.png');
+}
+#li_signup {
+    background-image: url('/static/images/common/signup_icon.png');
+}
+#li_signup: hover {
+    background-image: url('/static/images/common/signup_icon_h.png');
 }
