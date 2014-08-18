@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class TestController {
     
-    @RequestMapping(value="*")
+    @RequestMapping(value="/test")
     public String test(HttpServletRequest request,HttpServletResponse response,Model model) throws Exception{
         HttpSession session = request.getSession();
         session.setAttribute("user", "admin");

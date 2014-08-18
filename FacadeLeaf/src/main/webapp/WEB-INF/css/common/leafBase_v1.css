@@ -44,7 +44,7 @@ body {
     border-bottom: 2px solid #666;
     background-repeat: no-repeat;
 }
-#left_crumbs ul li: hover {
+#left_crumbs ul li:hover {
     line-height: 180px;
     color: white;
     border-top: 3px solid #666;
@@ -57,18 +57,18 @@ body {
 #li_login {
     background-image: url('/static/images/common/login_icon.png');
 }
-#li_login: hover {
+#li_login:hover {
     background-image: url('/static/images/common/login_icon_h.png');
 }
 #li_setting {
     background-image: url('/static/images/common/setting_icon.png');
 }
-#li_setting: hover {
+#li_setting:hover {
     background-image: url('/static/images/common/setting_icon_h.png');
 }
 #li_signup {
     background-image: url('/static/images/common/signup_icon.png');
 }
-#li_signup: hover {
+#li_signup:hover {
     background-image: url('/static/images/common/signup_icon_h.png');
 }

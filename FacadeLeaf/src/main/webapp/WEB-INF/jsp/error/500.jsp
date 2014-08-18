@@ -19,11 +19,11 @@
 <body>
 	<!-- 背景图 -->
 	<div class="transparent_30 error500"></div>
-
-	<div style="font-size:200%">系统故障，错误代码：${pageContext.errorData.statusCode}</div>
-
-	<div>请将以下错误信息提交给网站技术人员，技术人员会追查处理</div>
 	<div id="error_box">
+		<div style="font-size:200%">系统故障，错误代码：${pageContext.errorData.statusCode}</div>
+
+		<div>请将以下错误信息提交给网站技术人员，技术人员会追查处理</div>
+
 		<button id="detail_btn">详细信息+</button>
 		<div id="error_detail">
 			<div>

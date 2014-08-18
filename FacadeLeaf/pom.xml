@@ -11,6 +11,13 @@
 		<finalName>facadeLeaf</finalName>
 	</build>
 
+	<!-- 其他远程仓库 -->
+<!-- 	<repositories>
+		<repository>
+			<id>central</id>
+			<url>http://repo1.maven.org/maven2</url>
+		</repository>
+	</repositories> -->
 
 
 
@@ -36,7 +43,7 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>1.8.1</version>
 		</dependency>
-		
+
 		<dependency>
 			<!-- spring必须包，它包含访问配置文件、创建和管理bean以及进行（IoC/DI）操作相关的所有类 -->
 			<groupId>org.springframework</groupId>
@@ -164,11 +171,7 @@
 		<!-- junit依赖结束 -->
 
 		<!-- spring-junit测试用，需要 servlet-api -->
-<!-- 		<dependency>
-			<groupId>org.apache.tomcat</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>6.0.41</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>servlet-api</artifactId> <version>6.0.41</version> </dependency> -->
 
 		<!-- mybatis依赖开始 -->
 		<dependency>
@@ -194,7 +197,7 @@
 			<version>1.2.2</version>
 		</dependency>
 		<dependency>
-		    <!-- c3p0连接池 -->
+			<!-- c3p0连接池 -->
 			<groupId>c3p0</groupId>
 			<artifactId>c3p0</artifactId>
 			<version>0.9.1.2</version>
@@ -213,8 +216,27 @@
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-extras</artifactId>
 			<version>3.0.4</version>
-		</dependency>  
-		
+		</dependency>
+
+
+		<!-- shiro依赖 -->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-all</artifactId>
+			<version>1.2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-cas</artifactId>
+			<version>1.2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<version>1.2.3</version>
+		</dependency>
+
+    
 
 		<!-- 其他常用开发包 -->
 		<dependency>
@@ -222,7 +244,7 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-	
+
 		<dependency>
 			<groupId>taglibs</groupId>
 			<artifactId>standard</artifactId>

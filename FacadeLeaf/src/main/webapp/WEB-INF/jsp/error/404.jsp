@@ -13,6 +13,18 @@
 </head>
 <body>
 	<div class="transparent_30 error404"></div>
-	<div style="text-align:center;font-size:200%;font-weight:900;">页面不存在</div>
+	<div id="error_box">
+		<div style="text-align:center;font-size:200%;font-weight:900;">页面不存在</div>
+	</div>
+	
+
+
+        <img src="/getVerifyCode"><br/> 
+
+    <!-- 上面对应 是的 web.xml 的<servlet>与<servlet-mapping>-->
+
+            <input type='text' name='j_captcha_response' value=''>
+
+	
 </body>
 </html>
