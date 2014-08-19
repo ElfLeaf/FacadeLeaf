@@ -19,7 +19,7 @@
 	
 
 
-        <img src="/getVerifyCode"><br/> 
+        <img src="/static/getVerifyCode"><br/> 
 
     <!-- 上面对应 是的 web.xml 的<servlet>与<servlet-mapping>-->
 

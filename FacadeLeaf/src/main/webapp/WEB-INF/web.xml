@@ -21,6 +21,8 @@
 			classpath*:config/spring/spring-applicationContext.xml,
 			classpath*:config/spring/spring-mybatis.xml
 			classpath*:config/spring/spring-aop.xml
+			classpath*:config/spring/spring-tiles.xml
+			classpath*:config/spring/spring-shiro.xml
 		</param-value>
 	</context-param>
 	<listener>
@@ -56,8 +58,14 @@
 
 	<!-- 过滤器 -->
 	<!-- shiro -->
-	<!-- <filter> <filter-name>shiroFilter</filter-name> <filter-class> org.springframework.web.filter.DelegatingFilterProxy </filter-class> </filter> <filter-mapping> 
-		<filter-name>shiroFilter</filter-name> <url-pattern>/*</url-pattern> </filter-mapping> -->
+	<filter>
+		<filter-name>shiroFilter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+	<filter-mapping>
+		<filter-name>shiroFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 
 
 
@@ -100,7 +108,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>jcaptcha</servlet-name>
-		<url-pattern>/getVerifyCode</url-pattern>
+		<url-pattern>/static/getVerifyCode</url-pattern>
 	</servlet-mapping>
 
 	<!-- 开启el表达式 -->

@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/elfleaf/framework/JCaptcha/CaptchaFormAuthenticationFilter.java=UTF-8
 encoding//src/main/resources/config/mybatis/datasource-setting.properties=UTF-8
 encoding//src/main/resources/config/spring/evn-setting.properties=UTF-8
 encoding//src/main/resources/log4j.properties=UTF-8

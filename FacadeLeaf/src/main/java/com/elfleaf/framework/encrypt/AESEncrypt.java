@@ -15,7 +15,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 import org.junit.Test;
 
-import com.elfleaf.framework.utils.LeafDataFormat;
+import com.elfleaf.framework.utils.UtilsLeafDataFormat;
 
 /**
  * AES加密解密
@@ -23,7 +23,7 @@ import com.elfleaf.framework.utils.LeafDataFormat;
 public class AESEncrypt {
     
     /**
-     * AES数字签名密码
+     * AES数字签名码(千万别随意修改)
      */
     public final static String PASSWORD = "12345678";  
 
@@ -98,10 +98,10 @@ public class AESEncrypt {
         //加密   
         System.out.println("加密前：" + content);  
         byte[] encryptResult = encrypt(content, PASSWORD);  
-        String encryptResultStr = LeafDataFormat.parseByte2HexStr(encryptResult);  
+        String encryptResultStr = UtilsLeafDataFormat.parseByte2HexStr(encryptResult);  
         System.out.println("加密后：" + encryptResultStr);  
         //解密   
-        byte[] decryptFrom = LeafDataFormat.parseHexStr2Byte(encryptResultStr);  
+        byte[] decryptFrom = UtilsLeafDataFormat.parseHexStr2Byte(encryptResultStr);  
         byte[] decryptResult = decrypt(decryptFrom,PASSWORD);  
         System.out.println("解密后：" + new String(decryptResult));  
     }

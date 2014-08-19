@@ -8,9 +8,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class) 
 @ContextConfiguration(locations = {"classpath*:config/spring/spring-application.xml",
-                                    "classpath*:config/spring/spring-mybatis.xml",
-                                    "classpath*:config/spring/spring-aop.xml",
-                                "classpath*:config/spring/mvc-dispatcher-servlet.xml"}) 
+        "classpath*:config/spring/spring-mybatis.xml",
+        "classpath*:config/spring/spring-aop.xml",
+        "classpath*:config/spring/mvc-dispatcher-servlet.xml"}) 
+//                                    
+//                                    "classpath*:config/spring/spring-mybatis.xml",
+//                                    "classpath*:config/spring/spring-aop.xml" 
 public class UtilsSpringTest extends AbstractJUnit4SpringContextTests
 {
 

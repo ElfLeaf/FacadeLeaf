@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.FactoryBean;
 
 import com.elfleaf.framework.encrypt.AESEncrypt;
-import com.elfleaf.framework.utils.LeafDataFormat;
+import com.elfleaf.framework.utils.UtilsLeafDataFormat;
 
 /**
  * 配置文件连接密码解密
@@ -61,7 +61,7 @@ public class PropertiesEncryptFactoryBean implements FactoryBean {
      */
     private String deEncryptPassword(String originalPassword){  
         //解密   
-        byte[] decryptFrom = LeafDataFormat.parseHexStr2Byte(originalPassword);  
+        byte[] decryptFrom = UtilsLeafDataFormat.parseHexStr2Byte(originalPassword);  
         byte[] decryptResult = AESEncrypt.decrypt(decryptFrom,AESEncrypt.PASSWORD);  
         
         return new String(decryptResult);

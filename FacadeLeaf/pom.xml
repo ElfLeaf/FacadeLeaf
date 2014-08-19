@@ -12,12 +12,7 @@
 	</build>
 
 	<!-- 其他远程仓库 -->
-<!-- 	<repositories>
-		<repository>
-			<id>central</id>
-			<url>http://repo1.maven.org/maven2</url>
-		</repository>
-	</repositories> -->
+	<!-- <repositories> <repository> <id>central</id> <url>http://repo1.maven.org/maven2</url> </repository> </repositories> -->
 
 
 
@@ -235,8 +230,11 @@
 			<artifactId>shiro-spring</artifactId>
 			<version>1.2.3</version>
 		</dependency>
-
-    
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-nop</artifactId>
+			<version>1.6.1</version>
+		</dependency>
 
 		<!-- 其他常用开发包 -->
 		<dependency>

@@ -3,7 +3,7 @@ package com.elfleaf.framework.utils;
 /**
  * 数据格式化
  */
-public class LeafDataFormat {
+public class UtilsLeafDataFormat {
     /**将二进制转换成16进制 
      * @param buf 
      * @return 
