@@ -18,6 +18,12 @@ import com.octo.captcha.component.word.wordgenerator.WordGenerator;
 import com.octo.captcha.engine.image.ListImageCaptchaEngine;
 import com.octo.captcha.image.gimpy.GimpyFactory;
 
+/**
+ * <pre>
+ * 自定义类生成图片的形式，文字颜色大小
+ * @author blackcat
+ * </pre>
+ */
 public class MyImageCaptchaEngine extends ListImageCaptchaEngine {
     protected void buildInitialFactories() {
         WordGenerator wgen = new RandomWordGenerator("ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789");
@@ -27,7 +33,9 @@ public class MyImageCaptchaEngine extends ListImageCaptchaEngine {
                 new int[] {0, 100});
         //TextPaster textPaster = new RandomTextPaster(new Integer(4), new Integer(4), cgen, true);
 
+        //验证码宽度
         Integer backgourndWidth = 100;
+        //验证码高度
         Integer backgroundHeight = 50;
         
         MyTextDecorator myTextDecorator = new MyTextDecorator(1, Color.RED, backgourndWidth, backgroundHeight);  

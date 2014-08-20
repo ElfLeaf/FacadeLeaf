@@ -17,6 +17,12 @@ import com.octo.captcha.service.CaptchaServiceException;
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
 
+/**
+ * <pre>
+ * 请求生成验证码图片的servlet
+ * @author blackcat
+ * </pre>
+ */
 @SuppressWarnings("serial")
 public class ImageCaptchaServlet extends HttpServlet {
 

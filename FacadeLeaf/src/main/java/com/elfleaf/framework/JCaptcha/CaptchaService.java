@@ -7,7 +7,11 @@ import com.octo.captcha.service.image.AbstractManageableImageCaptchaService;
 import com.octo.captcha.service.image.DefaultManageableImageCaptchaService;
 import com.octo.captcha.service.image.ImageCaptchaService;
 
-
+/**
+ * <pre>
+ * 生成验证码图片引擎的单例
+ * </pre>
+ */
 public class CaptchaService extends AbstractManageableImageCaptchaService implements ImageCaptchaService {
 
     private static ImageCaptchaService instance = null;

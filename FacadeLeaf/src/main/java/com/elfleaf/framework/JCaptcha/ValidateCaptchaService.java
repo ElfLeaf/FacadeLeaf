@@ -6,7 +6,11 @@ import org.springframework.stereotype.Service;
 
 import com.octo.captcha.service.CaptchaServiceException;
 
-
+/**
+ * </pre>
+ * 检测验证码是否正确的服务类
+ * </pre>
+ */
 @Service
 public class ValidateCaptchaService {
     /**
@@ -17,6 +21,7 @@ public class ValidateCaptchaService {
      * @return
      */
     public boolean validateCaptchaChallenge(final HttpServletRequest request, String challengeResponse) {
+        //TODO 完整验证码检测正确性的代码
         try {
             // 获取产生验证码的id,用session的id来产生验证码
             String captchaID = request.getSession().getId();
