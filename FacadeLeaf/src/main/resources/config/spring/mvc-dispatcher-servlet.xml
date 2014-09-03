@@ -42,6 +42,14 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
+	
+	
+	<!-- shiro元注解支持相关bean(参考官方文档),如果有spring的mvc.xml就放在mvc中，否则放在application.xml中 -->
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor" />
+	<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+		<property name="securityManager" ref="securityManager" />
+	</bean>
+	
 
 	<!-- 通过以下这段配置，才可以读取静态的css和js等资源文件 -->
 	<mvc:default-servlet-handler />

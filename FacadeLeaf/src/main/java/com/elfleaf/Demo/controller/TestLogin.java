@@ -15,23 +15,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class TestLogin {
     
-    @RequestMapping("/login")
-    public String login(HttpServletRequest request,HttpServletResponse response,Model model) throws Exception {
-        
-        return "login/login";
-    }
-    
-    @RequestMapping("/doLogin")
-    public String doLogin(HttpServletRequest request,HttpServletResponse response,Model model) throws Exception {
-        Subject subject = SecurityUtils.getSubject();
-        UsernamePasswordToken token = new UsernamePasswordToken("abc", "aqw");
-        try {  
-            //4、登录，即身份验证  
-            subject.login(token);  
-        } catch (AuthenticationException e) {  
-            //5、身份验证失败  
-        }  
-        
-        return "testSession";
-    }
+//    @RequestMapping("/login")
+//    public String login(HttpServletRequest request,HttpServletResponse response,Model model) throws Exception {
+//        
+//        return "login/login";
+//    }
+//    
+//    @RequestMapping("/doLogin")
+//    public String doLogin(HttpServletRequest request,HttpServletResponse response,Model model) throws Exception {
+//        Subject subject = SecurityUtils.getSubject();
+//        UsernamePasswordToken token = new UsernamePasswordToken("abc", "aqw");
+//        try {  
+//            //4、登录，即身份验证  
+//            subject.login(token);  
+//        } catch (AuthenticationException e) {  
+//            //5、身份验证失败  
+//        }  
+//        
+//        return "testSession";
+//    }
 }

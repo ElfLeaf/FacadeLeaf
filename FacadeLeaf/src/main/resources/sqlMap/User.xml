@@ -20,11 +20,22 @@
         FROM leaf.user
         WHERE 1=1
         <if test='loginType=="uname"'>
-            AND uname = #{LoginName}
+            AND uname = #{loginName}
         </if>
         <if test='loginType=="email"'>
-            AND email = #{LoginName}
+            AND email = #{loginName}
         </if>
     </select>
+    
+    <select id="verifyPwd" parameterType="Map" resultType="user">
+        SELECT
+            *
+        FROM leaf.user
+        WHERE uid = #{uid}
+        AND password=PASSWORD(#{password});
+    </select>
+    
+    
+    
 
 </mapper>

@@ -12,7 +12,7 @@
 		<typeAlias alias="Map" type="java.util.Map" />
 		
 		<!-- 数据库model -->
-		<typeAlias alias="user" type="com.elfleaf.models.User" />
+		<typeAlias alias="user" type="com.elfleaf.models.user.bean.User" />
 	</typeAliases>
 
 	<mappers>

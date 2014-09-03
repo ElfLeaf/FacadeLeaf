@@ -7,9 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/doLogin">
-    <input name="loginName" type="text"/>
-    <input type="submit">
+<form action="/doLogin" method="post">
+    用户名<input name="loginName" type="text"/>
+    <br/>
+     密码<input name="password" type="text"/>
+   <input type="submit">
 </form>
 </body>
 </html>
