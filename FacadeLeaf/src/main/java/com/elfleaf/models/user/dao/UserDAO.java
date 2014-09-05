@@ -1,6 +1,7 @@
 package com.elfleaf.models.user.dao;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Repository;
@@ -21,7 +22,8 @@ public class UserDAO extends AMyBatisBaseDAO<User> {
         Map<String,Object> params = new HashMap<String, Object>();
         params.put("loginName", loginName);
         params.put("loginType", loginType);
-        return this.getSqlSession().selectOne(getSqlMethod("findLoginUserInfo"), params);
+       
+        return this.selectOne("findLoginUserInfo", params);
     }
     
     /**
@@ -32,6 +34,8 @@ public class UserDAO extends AMyBatisBaseDAO<User> {
         Map<String,Object> params = new HashMap<String, Object>();
         params.put("uid", uid);
         params.put("password", password);
-        return this.getSqlSession().selectOne(getSqlMethod("verifyPwd"), params);
+        List<User> list = this.selectList("abc");
+        
+        return this.selectOne("verifyPwd", params);
     }
 }
