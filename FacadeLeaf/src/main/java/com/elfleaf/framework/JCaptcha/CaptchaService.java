@@ -1,10 +1,10 @@
 package com.elfleaf.framework.JCaptcha;
 
+import com.octo.captcha.Captcha;
 import com.octo.captcha.engine.CaptchaEngine;
 import com.octo.captcha.service.captchastore.CaptchaStore;
 import com.octo.captcha.service.captchastore.FastHashMapCaptchaStore;
 import com.octo.captcha.service.image.AbstractManageableImageCaptchaService;
-import com.octo.captcha.service.image.DefaultManageableImageCaptchaService;
 import com.octo.captcha.service.image.ImageCaptchaService;
 
 /**
@@ -14,17 +14,17 @@ import com.octo.captcha.service.image.ImageCaptchaService;
  */
 public class CaptchaService extends AbstractManageableImageCaptchaService implements ImageCaptchaService {
 
-    private static ImageCaptchaService instance = null;
+    private static CaptchaService instance = null;
    
     protected CaptchaService(CaptchaStore captchaStore, CaptchaEngine captchaEngine, int minGuarantedStorageDelayInSeconds, int maxCaptchaStoreSize,
             int captchaStoreLoadBeforeGarbageCollection) {
         super(captchaStore, captchaEngine, minGuarantedStorageDelayInSeconds, maxCaptchaStoreSize, captchaStoreLoadBeforeGarbageCollection);
     }
 
-    public static ImageCaptchaService getInstance() {
+    public static CaptchaService getInstance() {
         if (instance == null) {
             // use customized engine
-            instance = new DefaultManageableImageCaptchaService(
+            instance = new CaptchaService(
                     new FastHashMapCaptchaStore(),
                     new MyImageCaptchaEngine(),
                     180,
@@ -33,6 +33,15 @@ public class CaptchaService extends AbstractManageableImageCaptchaService implem
         }
         return instance;
     }
-
+    
+    /**
+     * 检验输入验证码
+     * @param id
+     * @param challengeResponse
+     * @return
+     */
+    public boolean hasCaptcha(String id, String challengeResponse) {  
+        return store.getCaptcha(id).validateResponse(challengeResponse);  
+    }
    
 }

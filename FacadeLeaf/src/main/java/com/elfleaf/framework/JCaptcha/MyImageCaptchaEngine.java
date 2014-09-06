@@ -25,6 +25,7 @@ import com.octo.captcha.image.gimpy.GimpyFactory;
  * </pre>
  */
 public class MyImageCaptchaEngine extends ListImageCaptchaEngine {
+    
     protected void buildInitialFactories() {
         WordGenerator wgen = new RandomWordGenerator("ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789");
         RandomRangeColorGenerator cgen = new RandomRangeColorGenerator(
@@ -49,9 +50,6 @@ public class MyImageCaptchaEngine extends ListImageCaptchaEngine {
         TextPaster textPaster = new DecoratedRandomTextPaster(  
                 new Integer(4), new Integer(4), cgen, true,
                 textdecorators);  
-
-
-
 
         BackgroundGenerator backgroundGenerator = new UniColorBackgroundGenerator(backgourndWidth, backgroundHeight);
 

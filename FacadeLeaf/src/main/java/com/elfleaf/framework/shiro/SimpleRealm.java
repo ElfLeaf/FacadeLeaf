@@ -36,7 +36,7 @@ public class SimpleRealm extends AuthorizingRealm{
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
-        // TODO Auto-generated method stub
+        // TODO 实现授权
         return null;
     }
 

@@ -34,6 +34,11 @@ public class ImageCaptchaServlet extends HttpServlet {
 
 
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
+        //TODO 存储请求的jsessionId
+        //CaptchaService.getInstance().
+        
+        
+        //生成验证码
         byte[] captchaChallengeAsJpeg = null;
         ByteArrayOutputStream jpegOutputStream = new ByteArrayOutputStream();
         try {

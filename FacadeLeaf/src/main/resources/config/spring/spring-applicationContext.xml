@@ -30,6 +30,35 @@
 			</list>
 		</property>
 	</bean>
+	
+	
+	<!-- jcaptacha过滤器 -->  
+<!--     <bean id="security.filter.jcaptcha"  
+        class="org.acegisecurity.captcha.CaptchaValidationProcessingFilter">  
+        <property name="captchaService" ref="security.captcha.serviceproxy" />  
+        <property name="captchaValidationParameter" value="j_captcha_response" />  
+    </bean>   -->
+<!--     <bean id="security.captcha.serviceproxy"  
+        class="com.davidstudio.gbp.core.security.jcaptcha.JCaptchaServiceProxyImpl">  
+        <property name="jcaptchaService" ref="security.captcha.service" />  
+    </bean>   -->
+<!--     <bean id="security.captcha.service" class="com.elfleaf.framework.JCaptcha.CaptchaService">  
+        <constructor-arg type="com.octo.captcha.service.captchastore.CaptchaStore" index="0">  
+            <bean class="com.octo.captcha.service.captchastore.FastHashMapCaptchaStore" />  
+        </constructor-arg>  
+        <constructor-arg type="com.octo.captcha.engine.CaptchaEngine" index="1">  
+            <bean class="com.elfleaf.framework.JCaptcha.MyImageCaptchaEngine" />  
+        </constructor-arg>  
+        <constructor-arg index="2">  
+            <value>180</value>  
+        </constructor-arg>  
+        <constructor-arg index="3">  
+            <value>100000</value>  
+        </constructor-arg>  
+        <constructor-arg index="4">  
+            <value>75000</value>  
+        </constructor-arg>  
+    </bean>   -->
 
 
 
