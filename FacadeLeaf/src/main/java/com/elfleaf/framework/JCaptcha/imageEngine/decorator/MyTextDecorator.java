@@ -1,4 +1,4 @@
-package com.elfleaf.framework.JCaptcha;
+package com.elfleaf.framework.JCaptcha.imageEngine.decorator;
 
 import java.awt.AlphaComposite;
 import java.awt.BasicStroke;
@@ -25,7 +25,7 @@ import com.octo.captcha.component.image.textpaster.textdecorator.TextDecorator;
  * Date:2014.8.14
  * </pre>
  */
-public class MyTextDecorator implements TextDecorator{
+public class MyTextDecorator implements IMyTextDecorator{
 
     private Random myRandom = new SecureRandom();
 
@@ -52,7 +52,7 @@ public class MyTextDecorator implements TextDecorator{
 
 
 
-    public void decorateAttributedString(Graphics2D g2, AttributedString attributedWord, ChangeableAttributedString newAttrString) {
+    public void decorateAttributedString(Graphics2D g2, AttributedString attributedWord, MyChangeableAttributedString newAttrString) {
         Color oldColor = g2.getColor();
         Composite oldComp = g2.getComposite();
         g2.setComposite(AlphaComposite.getInstance(this.alphaCompositeType));

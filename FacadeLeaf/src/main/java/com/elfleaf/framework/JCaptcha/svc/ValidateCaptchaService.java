@@ -1,11 +1,10 @@
-package com.elfleaf.framework.JCaptcha;
+package com.elfleaf.framework.JCaptcha.svc;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Service;
 
 import com.octo.captcha.service.CaptchaServiceException;
-import com.octo.captcha.service.image.DefaultManageableImageCaptchaService;
 
 /**
  * </pre>

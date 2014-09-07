@@ -1,16 +1,14 @@
 
-body {
+.body {
     margin: 0;
     background-color: #666;
 }
 #container {
     text-align: center;
 }
-#left_crumbs {
-    position: fixed;
-    width: 100px;
-    height: 100%;
-    background-color: white;
+/*ÊäÈë¿ò½¹µã±ß¿òÉ«*/
+input:focus {
+	outline-color:#84C2FF;
 }
 .transparent_30 {
     opacity: .3;
@@ -29,6 +27,12 @@ body {
     filter: alpha(opacity=97);
     -moz-opacity: .97;
     -khtml-opacity: .97;
+}
+#left_crumbs {
+    position: fixed;
+    width: 100px;
+    height: 100%;
+    background-color: white;
 }
 #left_crumbs ul {
     margin: 0;

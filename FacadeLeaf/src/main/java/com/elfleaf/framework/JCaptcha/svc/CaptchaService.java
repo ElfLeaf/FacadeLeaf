@@ -1,6 +1,6 @@
-package com.elfleaf.framework.JCaptcha;
+package com.elfleaf.framework.JCaptcha.svc;
 
-import com.octo.captcha.Captcha;
+import com.elfleaf.framework.JCaptcha.imageEngine.MyImageCaptchaEngine;
 import com.octo.captcha.engine.CaptchaEngine;
 import com.octo.captcha.service.captchastore.CaptchaStore;
 import com.octo.captcha.service.captchastore.FastHashMapCaptchaStore;

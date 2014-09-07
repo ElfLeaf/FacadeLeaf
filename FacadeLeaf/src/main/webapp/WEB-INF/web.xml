@@ -103,7 +103,7 @@
 	<!-- jcaptcha servlet -->
 	<servlet>
 		<servlet-name>jcaptcha</servlet-name>
-		<servlet-class>com.elfleaf.framework.JCaptcha.ImageCaptchaServlet</servlet-class>
+		<servlet-class>com.elfleaf.framework.JCaptcha.servlet.ImageCaptchaServlet</servlet-class>
 		<load-on-startup>2</load-on-startup>
 	</servlet>
 	<servlet-mapping>

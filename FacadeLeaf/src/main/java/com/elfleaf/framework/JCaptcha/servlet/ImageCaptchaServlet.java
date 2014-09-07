@@ -1,4 +1,4 @@
-package com.elfleaf.framework.JCaptcha;
+package com.elfleaf.framework.JCaptcha.servlet;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
+import com.elfleaf.framework.JCaptcha.svc.CaptchaService;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;

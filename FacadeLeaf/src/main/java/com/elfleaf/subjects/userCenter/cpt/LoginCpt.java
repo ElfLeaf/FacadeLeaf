@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.elfleaf.framework.JCaptcha.ValidateCaptchaService;
+import com.elfleaf.framework.JCaptcha.svc.ValidateCaptchaService;
 
 @Component
 public class LoginCpt {
