@@ -148,10 +148,21 @@ public abstract class AMyBatisBaseDAO<T> extends SqlSessionDaoSupport{
         this.getSqlSession().select(getSqlMethod(statement), parameter, handler);
     }
     
+    /**
+     * 执行一段SQL查询结果返回到List的DTO中
+     * @param statement sqlmap中方法名
+     * @return
+     */
     public List<T> selectList(String statement) {
         return this.getSqlSession().selectList(getSqlMethod(statement));
     }
     
+    /**
+     * 执行一段SQL查询结果返回到List的DTO中
+     * @param statement sqlmap中方法名
+     * @param parameter 查询输入参数，
+     * @return
+     */
     public List<T> selectList(String statement, Object parameter) {
         return this.getSqlSession().selectList(getSqlMethod(statement), parameter);
     }
