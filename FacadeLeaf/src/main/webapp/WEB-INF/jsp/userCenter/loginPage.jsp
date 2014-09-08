@@ -15,33 +15,66 @@
 
 <link rel="stylesheet" type="text/css" href="<%=path%>/static/css/common/leafBase_v1.css?v=<%=Math.random()%>" />
 
-<script type="text/javascript" src="/static/js/common/jquery-1.9.1.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-    $("#captcha").click(function() {
-        $("#captcha").attr("src", "/static/getVerifyCode?t=" + Math.random());
-    });
-});
-</script>
+<!-- <script type="text/javascript" src="/static/js/common/jquery-1.9.1.min.js"></script> -->
+<script type="text/javascript" src="/static/js/common/angular.js"></script>
+<script type="text/javascript" src="/static/js/common/angular.min.js"></script>
+
+<style>
+.img_captcha {
+vertical-align:top;
+margin:2px;
+}
+#loginBox {
+    padding-left:20px;
+    padding-top:10px;
+    padding-bottom:20px;
+}
+#loginBox div{
+    padding-top:10px;
+}
+#loginForm {
+border:1px gray solid;
+border-radius:4px;
+width:300px;
+}
+button {
+width:80px;
+border-radius:4px;
+border:1px solid gray;
+background-color:white;
+}
+button:hover {
+border:1px solid red;
+}
+</style>
+
 
 </head>
-<body>
-	<form action="/userCenter/doLogin" method="post">
-		<div>
-			用户名<input name="loginName" type="text" />
-		</div>
-		<div>
-			密码<input name="password" type="text" /> <input type="submit">
-		</div>
-
-
-		<!-- 上面对应 是的 web.xml 的<servlet>与<servlet-mapping>-->
-		<div>
-			<input type='text' name='challengeResponse' value=''> <img id="captcha" src="/static/getVerifyCode?t=<%=Math.random()%>"
-				style="vertical-align: middle ">
-		</div>
+<body ng-app="" ng-controller="loginPageCtrl">
+	<form id="loginForm" action="/userCenter/doLogin" method="post">
+	<div id="loginBox">
+			<div>
+			    <label class="label_tag w60">登录账户:</label>
+				<input name="loginName" type="text" placeholder="用户名"/>
+			</div>
+			<div>
+			    <label class="label_tag w60">登录密码:</label>
+				<input name="password" type="text" placeholder="登录密码"/> 
+			</div>
+			<div>
+				<label class="label_tag w60">验证码:</label>
+				<input type='text' name='challengeResponse' maxlength="4" style="width:40px;margin:2px;"/>
+				<img id="captcha" class="img_captcha" ng-src="{{captchaUrl}}" ng-click="refreshCaptcha()" />
+			</div>
+			<div>
+			    <button type="submit">登录</button>
+			</div>
+	</div>
 	</form>
 
-
 </body>
+
+
+<script type="text/javascript" src="/static/js/userCenter/loginPage/ctrl/loginPageCtrl.js"></script>
+
 </html>

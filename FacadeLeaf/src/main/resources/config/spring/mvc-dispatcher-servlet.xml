@@ -8,19 +8,17 @@
                     http://www.springframework.org/schema/mvc  
                     http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
+    <!--开启注解处理器 -->
+    <context:annotation-config />
 
-	<!--开启注解处理器 -->
-	<context:annotation-config />
-
-	<!-- 开启spring MVC元注解扫描 -->
-	<context:component-scan base-package="com">
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Component" />
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service" />
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
-	</context:component-scan>
-
-
+    <!-- 开启spring MVC元注解扫描 -->
+    <context:component-scan base-package="com">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Component" />
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Service" />
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
+    </context:component-scan>
+    
 	<!-- 通过注解，把一个URL映射到Controller“类”上 -->
 	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
 		<!-- <property name="interceptors"> 多个拦截器,顺序执行 <ref bean="yourInterceptor" /> </property> -->

@@ -6,9 +6,24 @@
 #container {
     text-align: center;
 }
+/*全局默认div样式*/
+.debug {
+	border:1px solid red;
+}
+div {
+	font-size:12px;
+}
 /*输入框焦点边框色*/
 input:focus {
 	outline-color:#84C2FF;
+}
+/*全局默认span样式*/
+span {
+    font-size:12px;
+}
+/*label作为标签*/
+.label_tag {
+    display:inline-block;
 }
 .transparent_30 {
     opacity: .3;
@@ -28,6 +43,12 @@ input:focus {
     -moz-opacity: .97;
     -khtml-opacity: .97;
 }
+.w60 {
+	width:60px;
+}
+
+
+
 #left_crumbs {
     position: fixed;
     width: 100px;
