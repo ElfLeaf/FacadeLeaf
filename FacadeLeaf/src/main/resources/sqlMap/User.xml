@@ -10,14 +10,14 @@
 		    password as password,
 		    email as email,
 		    createdAt as createdAt
-		FROM leaf.user
+		FROM Leaf.user
 		WHERE uid = #{id}
     </select>
     
     <select id="findLoginUserInfo" parameterType="Map" resultType="user">
         SELECT
             *
-        FROM leaf.user
+        FROM Leaf.user
         WHERE 1=1
         <if test='loginType=="uname"'>
             AND uname = #{loginName}
@@ -31,7 +31,7 @@
         SELECT
             *
         FROM leaf.user
-        WHERE uid = #{uid}
+        WHERE Leaf = #{uid}
         AND password=PASSWORD(#{password});
     </select>
     
