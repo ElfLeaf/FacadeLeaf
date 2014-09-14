@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="<%=path%>/static/css/common/error.css" />
 <title>不存在页面</title>
 </head>
-<body>
+<body class="body">
 	<div class="transparent_30 error404"></div>
 	<div id="error_box">
 		<div style="text-align:center;font-size:200%;font-weight:900;">页面不存在</div>

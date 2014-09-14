@@ -16,7 +16,7 @@
 
 <title>系统故障</title>
 </head>
-<body>
+<body class="body">
 	<!-- 背景图 -->
 	<div class="transparent_30 error500"></div>
 	<div id="error_box">
