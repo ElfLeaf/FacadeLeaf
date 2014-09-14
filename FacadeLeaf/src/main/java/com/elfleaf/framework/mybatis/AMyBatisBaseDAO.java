@@ -113,7 +113,7 @@ public abstract class AMyBatisBaseDAO<T> extends SqlSessionDaoSupport{
      *      &lt/foreach>
      * </pre>
      * @param statement
-     * @param list 存放着DTO DOMAIN的数据集合
+     * @param list 存放着DOMAIN的数据集合
      * @return 插入条数
      */
     public int insertBatch(String statement, List<T> list) {
@@ -149,21 +149,46 @@ public abstract class AMyBatisBaseDAO<T> extends SqlSessionDaoSupport{
     }
     
     /**
-     * 执行一段SQL查询结果返回到List的DTO中
+     * 执行一段SQL查询结果返回到存放DOMAIN的LIST
      * @param statement sqlmap中方法名
-     * @return
+     * @return 存放DOMAIN的LIST
      */
     public List<T> selectList(String statement) {
         return this.getSqlSession().selectList(getSqlMethod(statement));
     }
     
     /**
-     * 执行一段SQL查询结果返回到List的DTO中
+     * <pre>
+     * 特殊说明:如果你想要得到的结果是一个数据库没用的字段，是一个泛型结果集，请用这个方法
+     * 执行一段SQL查询结果返回到List的DOMAIN中
+     * </pre>
+     * @param statement sqlmap中方法名
+     * @return 存放泛型的LIST
+     */
+    public <E> List<E> selectListGeneric(String statement) {
+        return this.getSqlSession().selectList(getSqlMethod(statement));
+    }
+    
+    /**
+     * 执行一段SQL查询结果返回到存放DOMAIN的LIST
      * @param statement sqlmap中方法名
      * @param parameter 查询输入参数，
-     * @return
+     * @return 存放DOMAIN的LIST
      */
     public List<T> selectList(String statement, Object parameter) {
+        return this.getSqlSession().selectList(getSqlMethod(statement), parameter);
+    }
+    
+    /**
+     * <pre>
+     * 特殊说明:如果你想要得到的结果是一个数据库没用的字段，是一个泛型结果集，请用这个方法
+     * 执行一段SQL查询结果返回到List的DOMAIN中
+     * </pre>
+     * @param statement sqlmap中方法名
+     * @param parameter 查询输入参数，
+     * @return 存放泛型的LIST
+     */
+    public <E> List<E> selectListGeneric(String statement, Object parameter) {
         return this.getSqlSession().selectList(getSqlMethod(statement), parameter);
     }
     
@@ -172,7 +197,7 @@ public abstract class AMyBatisBaseDAO<T> extends SqlSessionDaoSupport{
      * @param statement sqlmap中方法名
      * @param parameter 查询输入参数,一般为HashMap
      * @param rowBounds 查询结果行号偏移量
-     * @return List 存放DTO也就是Domain Model
+     * @return List 存放Domain Model的LIST
      * @deprecated
      */
     public List<T> selectList(String statement, Object parameter, RowBounds rowBounds) {
@@ -182,7 +207,7 @@ public abstract class AMyBatisBaseDAO<T> extends SqlSessionDaoSupport{
     /**
      * <pre>
      * SQL结果是查询唯一一条记录,注意如果返回多条结果则会异常！
-     * 结果的会将数据库mapkey列字段值放在map的k中，而mapkey列的值对应的整条结果会以一个对象的形式返回到Map的v中,注意v对象为本表的DTO也就是Domain Model
+     * 结果的会将数据库mapkey列字段值放在map的k中，而mapkey列的值对应的整条结果会以一个对象的形式返回到Map的v中,注意v对象为本表的Domain Model
      * </pre>
      * @param statement sqlmap中方法名
      * @param mapKey 数据库表中的列名
@@ -192,11 +217,25 @@ public abstract class AMyBatisBaseDAO<T> extends SqlSessionDaoSupport{
         return this.getSqlSession().selectMap(getSqlMethod(statement), mapKey);
     }
     
+    /**
+     * <pre>
+     * 特殊说明:如果你想要得到的结果是一个数据库没用的字段，是一个泛型结果集，请用这个方法
+     * SQL结果是查询唯一一条记录,注意如果返回多条结果则会异常！
+     * 结果的会将数据库mapkey列字段值放在map的k中，而mapkey列的值对应的整条结果会以一个对象的形式返回到Map的v中,注意v对象为本表的Domain Model
+     * </pre>
+     * @param statement sqlmap中方法名
+     * @param mapKey 数据库表中的列名
+     * @return MAP 每个Map的键值对是一条记录
+     */
+    public <E> Map<String,E> selectMapGeneric(String statement, String mapKey) {
+        return this.getSqlSession().selectMap(getSqlMethod(statement), mapKey);
+    }
+    
     
     /**
      * <pre>
      * 根据parameter输入参数，去查询多条记录
-     * 结果的会将数据库mapkey列字段值放在map的k中，而mapkey列的值对应的整条结果会以一个对象的形式返回到Map的v中,注意v对象为本表的DTO也就是Domain Model
+     * 结果的会将数据库mapkey列字段值放在map的k中，而mapkey列的值对应的整条结果会以一个对象的形式返回到Map的v中,注意v对象为本表的omain Model
      * 由于是多条结果，最后会放在List集合中
      * </pre>
      * @param statement sqlmap中方法名
@@ -209,12 +248,30 @@ public abstract class AMyBatisBaseDAO<T> extends SqlSessionDaoSupport{
         return (List<Map<String,T>>) this.getSqlSession().selectMap(getSqlMethod(statement), parameter, mapKey);
     }
     
+    
+    /**
+     * <pre>
+     * 特殊说明:如果你想要得到的结果是一个数据库没用的字段，是一个泛型结果集，请用这个方法
+     * 根据parameter输入参数，去查询多条记录
+     * 结果的会将数据库mapkey列字段值放在map的k中，而mapkey列的值对应的整条结果会以一个对象的形式返回到Map的v中,注意v对象为本表的omain Model
+     * 由于是多条结果，最后会放在List集合中
+     * </pre>
+     * @param statement sqlmap中方法名
+     * @param statement 查询输入参数,一般为HashMap
+     * @param mapKey 数据库表中的列名
+     * @return 数据存储在Map中的List,每个Map的键值对是一条记录
+     */
+    @SuppressWarnings("unchecked")
+    public <E> List<Map<String,E>> selectMapGeneric(String statement, Object parameter, String mapKey) {
+        return (List<Map<String,E>>) this.getSqlSession().selectMap(getSqlMethod(statement), parameter, mapKey);
+    }
+    
 
     /**
      * <pre>
      * 本方法不常用，也不推荐用
      * 根据parameter输入参数，去查询多条记录,并且分页显示其中的 一部分,mybatis的分页容易内存溢出，不推荐用这个方法
-     * 结果的会将数据库mapkey列字段值放在map的k中，而mapkey列的值对应的整条结果会以一个对象的形式返回到Map的v中,注意v对象为本表的DTO也就是Domain Model
+     * 结果的会将数据库mapkey列字段值放在map的k中，而mapkey列的值对应的整条结果会以一个对象的形式返回到Map的v中,注意v对象为本表的Domain Model
      * 由于是多条结果，最后会放在List集合中
      * </pre>
      * @param statement sqlmap中方法名
@@ -232,9 +289,21 @@ public abstract class AMyBatisBaseDAO<T> extends SqlSessionDaoSupport{
     /**
      * 选出一条记录，若多条会有异常!
      * @param statement sqlmap中方法名
-     * @return T DTO也就是Domain Model
+     * @return T Domain Model
      */
     public T selectOne(String statement) {
+        return this.getSqlSession().selectOne(getSqlMethod(statement));
+    }
+    
+    /**
+     * <pre>
+     * 特殊说明:如果你想要得到的结果是一个数据库没用的字段，是一个泛型结果集，请用这个方法
+     * 选出一条记录，若多条会有异常!
+     * </pre>
+     * @param statement sqlmap中方法名
+     * @return E 泛型
+     */
+    public <E> E selectOneGeneric(String statement) {
         return this.getSqlSession().selectOne(getSqlMethod(statement));
     }
     
@@ -242,11 +311,27 @@ public abstract class AMyBatisBaseDAO<T> extends SqlSessionDaoSupport{
      * 选出一条记录，若多条会有异常!
      * @param statement sqlmap中方法名
      * @param parameter 查询输入参数,一般为HashMap
-     * @return T DTO也就是Domain Model
+     * @return T Domain Model
      */
     public T selectOne(String statement, Object parameter) {
         return this.getSqlSession().selectOne(getSqlMethod(statement), parameter);
     }
+    
+    
+    /**
+     * <pre>
+     * 特殊说明:如果你想要得到的结果是一个数据库没用的字段，是一个泛型结果集，请用这个方法
+     * 选出一条记录，若多条会有异常!
+     * </pre>
+     * @param statement sqlmap中方法名
+     * @param parameter 查询输入参数,一般为HashMap
+     * @return E 泛型
+     */
+    public <E> E selectOneGeneric(String statement, Object parameter) {
+        return this.getSqlSession().selectOne(getSqlMethod(statement), parameter);
+    }
+    
+    
     
     /**
      * 更新数据库记录
@@ -285,7 +370,7 @@ public abstract class AMyBatisBaseDAO<T> extends SqlSessionDaoSupport{
      *      &lt/foreach>  
      * </pre>
      * @param statement sqlmap中方法名
-     * @param list 要更新的数据的DTO集合
+     * @param list 要更新的数据的DOMAIN集合
      * @return 更新条数
      */
     public int updateBatch(String statement, List<T> list) {
