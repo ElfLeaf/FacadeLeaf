@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.ibatis.cache.Cache;
 import org.springframework.stereotype.Repository;
 
 import com.elfleaf.framework.mybatis.AMyBatisBaseDAO;
@@ -35,7 +36,7 @@ public class UserDAO extends AMyBatisBaseDAO<User> {
         params.put("uid", uid);
         params.put("password", password);
         List<User> list = this.selectList("abc");
-        
+
         return this.selectOne("verifyPwd", params);
     }
 }

@@ -55,15 +55,15 @@ border:1px solid red;
 	<div id="loginBox">
 			<div>
 			    <label class="label_tag w60">登录账户:</label>
-				<input name="loginName" type="text" placeholder="用户名"/>
+				<input class="input_focus" name="loginName" type="text" placeholder="用户名"/>
 			</div>
 			<div>
 			    <label class="label_tag w60">登录密码:</label>
-				<input name="password" type="text" placeholder="登录密码"/> 
+				<input class="input_focus" name="password" type="text" placeholder="登录密码"/> 
 			</div>
 			<div>
 				<label class="label_tag w60">验证码:</label>
-				<input type='text' name='challengeResponse' maxlength="4" style="width:40px;margin:2px;"/>
+				<input class="input_focus" type='text' name='challengeResponse' maxlength="4" style="width:40px;margin:2px;"/>
 				<img id="captcha" class="img_captcha" ng-src="{{captchaUrl}}" ng-click="refreshCaptcha()" />
 			</div>
 			<div>

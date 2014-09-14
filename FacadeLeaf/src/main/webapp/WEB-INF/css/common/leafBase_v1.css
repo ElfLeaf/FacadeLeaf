@@ -6,22 +6,22 @@
 #container {
     text-align: center;
 }
-/*È«¾ÖÄ¬ÈÏdivÑùÊ½*/
+/*æµ‹è¯•è¾¹æ¡†ä½ç½®ç”¨*/
 .debug {
 	border:1px solid red;
 }
 div {
 	font-size:12px;
 }
-/*ÊäÈë¿ò½¹µã±ß¿òÉ«*/
-input:focus {
+/*inputè¾“å…¥æ¡†æ ·å¼*/
+.input_focus {
 	outline-color:#84C2FF;
 }
-/*È«¾ÖÄ¬ÈÏspanÑùÊ½*/
+/*å…¨å±€spanæ ·å¼*/
 span {
     font-size:12px;
 }
-/*label×÷Îª±êÇ©*/
+/*æ ‡ç­¾æ ·å¼*/
 .label_tag {
     display:inline-block;
 }
