@@ -18,7 +18,7 @@
 		<param-name>contextConfigLocation</param-name>
 		<!-- 相关配置文件文件路径，可逗号隔开 -->
 		<param-value>
-			classpath*:config/spring/spring-applicationContext.xml,
+			classpath*:config/spring/spring-esb-applicationContext.xml,
 			classpath*:config/spring/spring-mybatis.xml
 			classpath*:config/spring/spring-aop.xml
 			classpath*:config/spring/spring-tiles.xml

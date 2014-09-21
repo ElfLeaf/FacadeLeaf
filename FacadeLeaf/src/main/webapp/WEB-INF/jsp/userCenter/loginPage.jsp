@@ -44,7 +44,7 @@ border:1px solid gray;
 background-color:white;
 }
 button:hover {
-border:1px solid red;
+border:1px solid orange;
 }
 </style>
 
@@ -67,7 +67,7 @@ border:1px solid red;
 				<img id="captcha" class="img_captcha" ng-src="{{captchaUrl}}" ng-click="refreshCaptcha()" />
 			</div>
 			<div>
-			    <button type="submit">登录</button>
+			    <button ng-click="doLogin()">登录</button>
 			</div>
 	</div>
 	</form>

@@ -3,6 +3,8 @@
 	<name>FacadeLeaf</name>
 	<comment></comment>
 	<projects>
+		<project>ESBLeaf</project>
+		<project>ElfLeafFramework</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
