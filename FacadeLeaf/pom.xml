@@ -26,7 +26,7 @@
 			<!-- 基于AOP的Spring特性如声明型事务管理，如果需要使用aop还需要引入aopalliance，aspectjrt，aspectjweaver这3个jar包 -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>4.1.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -43,25 +43,25 @@
 			<!-- spring必须包，它包含访问配置文件、创建和管理bean以及进行（IoC/DI）操作相关的所有类 -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>4.1.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<!-- spring必须包 ,已经包含spring-asm，包含Spring框架基本的核心工具类 -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>4.1.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<!-- spring必须包，为Spring核心提供了大量扩展 -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>4.1.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<!-- spring必须包，spring 表达式语言 -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-expression</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>4.1.0.RELEASE</version>
 		</dependency>
 
 
@@ -70,7 +70,7 @@
 			<!-- 辅助配合junit4测试，让spring依赖注入可单元测试，单元测试还需要引入junit4.1.7 -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>4.1.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<!-- spring扩展包 -->
@@ -84,28 +84,28 @@
 			<!-- spring整合第三方的 ORM 映射支持，如 Hibernate 、Ibatis、Jdo以及spring的JPA的支持。 -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>4.1.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<!-- spring扩展包 -->
 			<!-- 这个jar 文件包含Web 应用开发时，用到Spring 框架时所需的核心类，包括自动载入Web Application -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>4.1.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<!-- spring扩展包 -->
 			<!-- 这个jar 文件包含Spring MVC 框架相关的所有类。包括框架的Servlets，Web MVC框架，控制器和视图 -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>4.1.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<!-- spring扩展包 -->
 			<!-- 第三方扩展包，比如要使用spring集成email发送邮件 ，或者spring集成quartz调度服务，以及对ui模版freemaker等的支持。 -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>4.1.0.RELEASE</version>
 		</dependency>
 
 		<!-- <dependency> spring扩展包 对Hibernate 3.0/3.1/3.2的支持。 外部依赖spring-jdbc，Hibernate3，(spring-web)。 <groupId>org.springframework</groupId> <artifactId>spring-hibernate3</artifactId> 
@@ -115,7 +115,7 @@
 			<!-- 这个jar 文件包含对Spring 对JDBC 数据访问进行封装的所有类。 外部依赖spring-beans，spring-dao。 -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>4.1.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<!-- spring扩展包 -->
@@ -127,7 +127,7 @@
 
 		<!-- spring-aspects.jar 提供对AspectJ的支持，以便可以方便的将面向方面的功能集成进IDE中，比如Eclipse AJDT。 外部依赖。 -->
 		<!-- spring-oxm Spring 3.0 新特性 O/X Mapper 在 Java 对象（几乎总是一个 plain old Java object，或简写为 POJO）和 XML 文档之间来回转换 -->
-		<!-- <dependency> 提供事务相关功能 <groupId>org.springframework</groupId> <artifactId>spring-tx</artifactId> <version>3.2.4.RELEASE</version> </dependency> -->
+		<!-- <dependency> 提供事务相关功能 <groupId>org.springframework</groupId> <artifactId>spring-tx</artifactId> <version>4.1.0.RELEASE</version> </dependency> -->
 
 		<!-- spring-jms.jar 这个jar包提供了对JMS 1.0.2/1.1的支持类。 外部依赖spring-beans，spring-dao，JMS API。 spring-jca.jar 对JCA 1.0的支持。 外部依赖spring-beans，spring-dao， JCA API。 -->
 		<!-- spring-ibatis.jar 对iBATIS SQL Maps的支持。 外部依赖spring-jdbc，iBATIS SQL Maps。 -->

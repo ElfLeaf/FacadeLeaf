@@ -18,6 +18,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.elfleaf.consistent.CRequest;
 import com.elfleaf.framework.consistent.CJSONObject;
@@ -27,7 +28,7 @@ import com.elfleaf.subjects.userCenter.cpt.LoginCpt;
  * 用户登录类
  */
 @RequestMapping("/userCenter")
-@Controller
+@RestController
 public class LoginCtrl {
 
     @Autowired
