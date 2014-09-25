@@ -3,7 +3,6 @@ package com.elfleaf.subjects.userCenter.ctrl;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.sf.json.JSON;
 import net.sf.json.JSONObject;
 
 import org.apache.shiro.SecurityUtils;
@@ -14,11 +13,14 @@ import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.util.SavedRequest;
 import org.apache.shiro.web.util.WebUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.HttpStatus;
 import org.springframework.ui.Model;
+import org.springframework.validation.support.BindingAwareModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.elfleaf.consistent.CRequest;
 import com.elfleaf.framework.consistent.CJSONObject;
@@ -44,7 +46,7 @@ public class LoginCtrl {
      * @throws Exception
      */
     @RequestMapping("/loginPage")
-    public String login(HttpServletRequest request,HttpServletResponse response,Model model) throws Exception { 
+    public ModelAndView login(HttpServletRequest request,HttpServletResponse response,Model model) throws Exception { 
         /*
          * @STEP 1 获得用户请求跳转到登录页面前的url地址
          * @STEP 2 将用户登录前的url地址放入到session中
@@ -62,8 +64,10 @@ public class LoginCtrl {
                 session.setAttribute(CRequest.LAST_REQUEST_URL, lastURL);
             }
         }
+        
+        ModelAndView mav = new ModelAndView("userCenter/loginPage");
         //@STEP 3 返回用户登录页面
-        return "userCenter/loginPage";
+        return mav;
     }
     
     /**
@@ -75,6 +79,7 @@ public class LoginCtrl {
      * @throws Exception
      */
     @RequestMapping(value="/doLogin", method=RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
     public String doLogin(HttpServletRequest request,HttpServletResponse response,Model model) throws Exception {
         
         /*
