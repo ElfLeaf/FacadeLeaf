@@ -10,12 +10,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>" />
+    <link rel="stylesheet" type="text/css" href="<%=path%>/static/css/common/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<%=path%>/static/css/common/leafBase_v1.css" />
   
     <title><tiles:getAsString name="title"/></title>
   </head>
   <body>
-    <tiles:insertAttribute name="left_crumbs" />
-    <tiles:insertAttribute name="primary-content" />
+  <div class="container-fluid text-center debug">
+    <tiles:insertAttribute name="head" />
+    <%-- <tiles:insertAttribute name="left_crumbs" /> --%>
+    <tiles:insertAttribute name="body" />
+  </div>
   </body>
 </html>

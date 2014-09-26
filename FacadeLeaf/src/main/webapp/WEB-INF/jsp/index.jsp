@@ -5,34 +5,60 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
-<html>
-  <head>
-    <base href="<%=basePath%>" />
-    <link rel="stylesheet" type="text/css" href="<%=path%>/static/css/common/leafBase_v1.css" />
-  </head>
-  
-  <body>
-    <div id="left_crumbs" class="transparent_97">
-        <ul class="font_w900">
-            <li id="li_login">登录</li>
-            <li id="li_setting">设置</li>
-        </ul>
+
+
+<div class="row">
+        <div class="col-xs-4">热点旋转木马图<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
+        <div class="col-xs-5">热点标题自滚动点选<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
+
+        <div class="col-xs-3">热点摘要显示<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
     </div>
 
+    <div class="row">
+        <div class="col-xs-12">喜欢的板块(自由编辑收藏区)<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
+        <div class="col-xs-12">最近浏览板块<br/><br/><br/><br/><br/></div>
+    </div>
 
-    <div id="container">
-        <div id="box"
-            style="margin:auto;width:1160px;height:1000px;border:1px solid red;">
-            <div id="crumbs"
-                style="margin:auto;height:100px;width:1160px;background-color:white;"></div>
-
-            <h1>My First Heading</h1>
-
-            <p>My first paragraph1.</p>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">版区相关广告？<br/><br/><br/><br/></div>
+            <div class="row">
+                <div class="col-xs-4">热门版区<br/><br/><br/><br/><br/><br/></div>
+                <div class="col-xs-4">热门版区<br/><br/><br/><br/><br/><br/></div>
+                <div class="col-xs-4">热门版区<br/><br/><br/><br/><br/><br/></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">热门版区<br/><br/><br/><br/><br/><br/></div>
+                <div class="col-xs-4">热门版区<br/><br/><br/><br/><br/><br/></div>
+                <div class="col-xs-4">热门版区<br/><br/><br/><br/><br/><br/></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">热门版区<br/><br/><br/><br/><br/><br/></div>
+                <div class="col-xs-4">热门版区<br/><br/><br/><br/><br/><br/></div>
+                <div class="col-xs-4">热门版区<br/><br/><br/><br/><br/><br/></div>
+            </div>
         </div>
-
-
     </div>
-  </body>
-</html>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">版区相关广告？<br/><br/><br/><br/></div>
+            <div class="row">
+                <div class="col-xs-4">随便看看<br/><br/><br/><br/><br/><br/></div>
+                <div class="col-xs-4">随便看看<br/><br/><br/><br/><br/><br/></div>
+                <div class="col-xs-4">随便看看<br/><br/><br/><br/><br/><br/></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">随便看看<br/><br/><br/><br/><br/><br/></div>
+                <div class="col-xs-4">随便看看<br/><br/><br/><br/><br/><br/></div>
+                <div class="col-xs-4">随便看看<br/><br/><br/><br/><br/><br/></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">随便看看<br/><br/><br/><br/><br/><br/></div>
+                <div class="col-xs-4">随便看看<br/><br/><br/><br/><br/><br/></div>
+                <div class="col-xs-4">随便看看<br/><br/><br/><br/><br/><br/></div>
+            </div>
+        </div>
+    </div>
+
 

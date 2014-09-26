@@ -1,13 +1,13 @@
 
-.body {
+body {
     margin: 0;
-    background-color: #666;
+    background-color: #DFDFDF;
 }
 #container {
     text-align: center;
 }
 /*测试边框位置用*/
-.debug {
+.debug div {
 	border:1px solid red;
 }
 div {

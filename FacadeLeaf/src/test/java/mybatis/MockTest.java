@@ -29,7 +29,7 @@ public class MockTest extends UtilsSpringTest{
         MockHttpServletResponse response = new MockHttpServletResponse();
         Model model = new RedirectAttributesModelMap();
         try {
-            loginCtrl.login(request, response, model);
+            loginCtrl.loginPage(request, response, model);
         } catch (Exception e) {
             e.printStackTrace();
         }

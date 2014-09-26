@@ -13,12 +13,9 @@ import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.util.SavedRequest;
 import org.apache.shiro.web.util.WebUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.ui.Model;
-import org.springframework.validation.support.BindingAwareModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -46,7 +43,7 @@ public class LoginCtrl {
      * @throws Exception
      */
     @RequestMapping("/loginPage")
-    public ModelAndView login(HttpServletRequest request,HttpServletResponse response,Model model) throws Exception { 
+    public ModelAndView loginPage(HttpServletRequest request,HttpServletResponse response,Model model) throws Exception { 
         /*
          * @STEP 1 获得用户请求跳转到登录页面前的url地址
          * @STEP 2 将用户登录前的url地址放入到session中
@@ -65,9 +62,11 @@ public class LoginCtrl {
             }
         }
         
-        ModelAndView mav = new ModelAndView("userCenter/loginPage");
+        
         //@STEP 3 返回用户登录页面
+        ModelAndView mav = new ModelAndView("userCenter/loginPage");
         return mav;
+        //return "userCenter/loginPage";
     }
     
     /**
@@ -79,8 +78,8 @@ public class LoginCtrl {
      * @throws Exception
      */
     @RequestMapping(value="/doLogin", method=RequestMethod.POST)
-    @ResponseStatus(HttpStatus.OK)
-    public String doLogin(HttpServletRequest request,HttpServletResponse response,Model model) throws Exception {
+    //@ResponseStatus(HttpStatus.OK)
+    public ModelAndView doLogin(HttpServletRequest request,HttpServletResponse response,Model model) throws Exception {
         
         /*
          * @STEP 1检测验证码是否输入正确
@@ -116,13 +115,19 @@ public class LoginCtrl {
         String lastURL = (String) session.getAttribute(CRequest.LAST_REQUEST_URL);
         
         //@STEP 5若存在lastUrl那么重定向到lastUrl,若不存在则返回首页
+        ModelAndView mav = new ModelAndView();
         if (lastURL != null) {
             //若存在lastUrl那么重定向到lastUrl
             //需要配置shiro的rememberMe 否则session丢失
-            return "redirect:" + lastURL;
+            mav.setViewName("redirect:" + lastURL);
+            return mav;
+            //return "redirect:" + lastURL;
         } else {
             //若不存在则返回首页
-            return "redirect:" + "/index";
+            mav.setViewName("redirect:index");
+            return mav;
+            
+            //return "redirect:index";
             //return "testSession";
         }
     }

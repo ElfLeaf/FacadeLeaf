@@ -70,14 +70,14 @@
 
 
 	<!-- 首页映射，只有 通过这个配置才能访问WEB-INF下的首页 -->
-	<servlet>
+<!-- 	<servlet>
 		<servlet-name>welcomePage</servlet-name>
 		<jsp-file>/WEB-INF/jsp/index.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
+	</servlet> -->
+<!-- 	<servlet-mapping>
 		<servlet-name>welcomePage</servlet-name>
 		<url-pattern>/index</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping> -->
 	<!--end -->
 
 
