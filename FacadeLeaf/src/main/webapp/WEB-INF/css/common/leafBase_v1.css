@@ -7,9 +7,14 @@ body {
     text-align: center;
 }
 /*测试边框位置用*/
+/*
+.debug {
+    border:1px solid red;
+}
 .debug div {
 	border:1px solid red;
 }
+*/
 div {
 	font-size:12px;
 }

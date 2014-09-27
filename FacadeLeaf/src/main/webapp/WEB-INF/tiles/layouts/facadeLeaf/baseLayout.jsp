@@ -10,9 +10,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>" />
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link rel="stylesheet" type="text/css" href="<%=path%>/static/css/common/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<%=path%>/static/css/common/leafBase_v1.css" />
-  
+    <link rel="stylesheet" type="text/css" href="<%=path%>/static/css/common/head.css" />
+    
+    <script type="text/javascript" src="/static/js/common/angular.js"></script>
+    <!-- <script type="text/javascript" src="/static/js/common/angular.min.js"></script> -->
+    
     <title><tiles:getAsString name="title"/></title>
   </head>
   <body>
@@ -21,5 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%-- <tiles:insertAttribute name="left_crumbs" /> --%>
     <tiles:insertAttribute name="body" />
   </div>
+
+  
   </body>
 </html>
