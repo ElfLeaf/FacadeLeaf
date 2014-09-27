@@ -1,0 +1,17 @@
+.head {
+    height:175px;
+    background:url(/static/images/common/head.jpg) no-repeat center 0;
+}
+.searchbar {
+	background-color:#FFF;
+	border-top:1px solid #CCC;
+	border-bottom:1px solid #CCC;
+	height:40px;
+}
+
+.bar_fixed {
+	width:100%;
+	position:fixed;
+	top:0px;
+	z-index:100;
+}
