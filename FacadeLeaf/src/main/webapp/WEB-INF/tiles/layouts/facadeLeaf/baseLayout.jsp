@@ -17,10 +17,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="stylesheet" type="text/css" href="<%=path%>/static/css/common/leafBase_v1.css" />
     <link rel="stylesheet" type="text/css" href="<%=path%>/static/css/common/head.css" />
     
-    <script type="text/javascript" src="/static/js/common/angular.js"></script>
-    <!-- <script type="text/javascript" src="/static/js/common/angular.min.js"></script> -->
-    
-    <title><tiles:getAsString name="title"/></title>
+    <!--<script type="text/javascript" src="/static/js/common/angular.js"></script>-->
+    <script type="text/javascript" src="/static/js/common/jquery-1.9.1.min.js"></script> 
+    <script type="text/javascript" src="/static/js/common/angular.min.js"></script> 
+
+     
+	<!--[if lte IE 9]>
+		<script src="/static/js/common/respond.min.js"></script>
+		<script src="/static/js/common/html5shiv.js"></script>
+	<![endif]-->
+	    <title><tiles:getAsString name="title"/></title>
   </head>
   <body>
   <div class="container-fluid text-center debug">

@@ -18,7 +18,7 @@
 	
 	<!-- index首页 -->
 	<definition name="index" extends="facadeleaf.baseLayout">
-        <put-attribute name="title" value="首页" />
+        <put-attribute name="title" value="欢迎来到ElfLeaf" />
         <put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
     </definition>
 

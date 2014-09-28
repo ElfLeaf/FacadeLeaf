@@ -22,6 +22,9 @@ div {
 .input_focus {
 	outline-color:#84C2FF;
 }
+.nopadding {
+	padding:0;
+}
 /*全局span样式*/
 span {
     font-size:12px;
@@ -101,4 +104,11 @@ span {
 }
 #li_signup:hover {
     background-image: url('/static/images/common/signup_icon_h.png');
+}
+
+.horizontal_ul {
+    list-style: none;
+}
+.horizontal_ul li{
+    display:inline-block;
 }
