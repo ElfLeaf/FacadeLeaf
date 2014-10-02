@@ -6,6 +6,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
 
+<link rel="stylesheet" type="text/css" href="<%=path%>/static/css/common/slidePic.css" />
 <link rel="stylesheet" type="text/css" href="<%=path%>/static/css/index/index.css" />
 
 <script>
@@ -65,75 +66,104 @@ function autoSlidePic(slideWidth,time) {
 
 
 </script>
+<div class="container-fluid text-center" style="width:96%;">
+    <div id="hot_box_head" class="row">
+        <div class="row hot_row row_container">
+            <div class="col-lg-3 col-md-6">
+                <div class="hot_box">
+　　                                 <div style="color:red;"><b>今日新闻</b></div>
+                    <ul class="hot_news_ul">
+                        <li><span>韩《神佑》全新圣域阵营地图原画大曝</span></li>
+                        <li><span>N道防线齐开火 《风暴英雄》防御建筑</span></li>
+                        <li><span>盘点《灵魂回响》玩家最爱 新职业受宠</span></li>
+                        <li><span>N道防线齐开火 《风暴英雄》防御建筑</span></li>
+                        <li><span>盘点《灵魂回响》玩家最爱 新职业受宠</span></li>
+                    </ul>   
+               </div>
+            </div>
+    
+            <div class="col-lg-5 col-md-6">
+               <div class="hot_box">
+　　                                  <div style="color:red;"><b>今日热文</b></div>
+                    <ul class="hot_news_ul">
+                        <li><span>韩《神佑》全新圣域阵营地图原画大曝</span></li>
+                        <li><span>N道防线齐开火 《风暴英雄》防御建筑</span></li>
+                        <li><span>盘点《灵魂回响》玩家最爱 新职业受宠</span></li>
+                        <li><span>N道防线齐开火 《风暴英雄》防御建筑</span></li>
+                        <li><span>盘点《灵魂回响》玩家最爱 新职业受宠</span></li>
+                    </ul>   
+               </div>
+            </div>
+        
+	        <%--幻灯片 --%>
+	        <div class="col-lg-4 col-md-6">
+	 
+				<div id="slidePic_box" class="hot_box">
+				    <ul id="slide_pic" class="horizontal_ul slide_pic_ul">
+	                    <li>
+	                        <div class="slide_text"><span>文字说明</span></div>
+		                    <img src="<%=basePath%>/static/images/slide/1.jpg" width="auto" height="auto"/>
+	                    </li>
+	                    <li>
+	                        <div class="slide_text"><span>文字说明</span></div>
+	                        <img src="<%=basePath%>/static/images/slide/2.jpg" width="auto" height="auto"/>
+	                    </li>
+	                </ul>
+				</div>
+		   </div>
 
-<div class="row" style="padding-top:30px;height:30em;border:1px solid red;">
-        <%--幻灯片 --%>
-        <div class="col-lg-4 col-md-4">
- 
-			<div id="slidePic_box">
-			    <ul id="slide_pic" class="horizontal_ul slide_pic_ul">
-                    <li>
-                        <div class="slide_text"><span>文字说明</span></div>
-	                    <img src="<%=basePath%>/static/images/slide/1.jpg" width="auto" height="auto"/>
-                    </li>
-                    <li>
-                        <div class="slide_text"><span>文字说明</span></div>
-                        <img src="<%=basePath%>/static/images/slide/2.jpg" width="auto" height="auto"/>
-                    </li>
-                </ul>
-			</div>
-	</div>
-	   
-        <div class="col-lg-5 col-md-5">热点标题自滚动点选<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
+        </div>
+    </div><%-- <div id="hot_box_head" class="row">--%>  
+    
+    
+    
 
-        <div class="col-lg-3 col-md-3">热点摘要显示<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
-    </div>
-
-    <div class="row">
+<!--     <div class="row">
         <div class="col-lg-12 col-md-12">喜欢的板块(自由编辑收藏区)<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
         <div class="col-lg-12 col-md-12">最近浏览板块<br/><br/><br/><br/><br/></div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-12 col-md-12">
-            <div class="row">版区相关广告？<br/><br/><br/><br/></div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
-                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
-                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
-                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
-                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
-                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
-                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-12 col-md-12">
-            <div class="row">版区相关广告？<br/><br/><br/><br/></div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
-                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
-                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
-                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
-                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
-                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
-                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
-            </div>
-        </div>
-    </div>
-
+    </div> -->
+	<div id="content" class="row">
+	    <div class="row row_container">
+	        <div class="col-lg-12 col-md-12">
+	            <div class="row">
+	                <div style="height:100px;width:100%;">版区相关广告？</div>
+	            </div>
+	            <div class="row">
+	                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
+	                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
+	                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
+	                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
+	                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
+	                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
+	                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
+	                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
+	                <div class="col-lg-4 col-md-6">热门版区<br/><br/><br/><br/><br/><br/></div>
+	            </div>
+	        </div>
+	    </div>
+	
+	
+	
+	<!--     <div class="row">
+	        <div class="col-lg-12 col-md-12">
+	            <div class="row">版区相关广告？<br/><br/><br/><br/></div>
+	            <div class="row">
+	                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
+	                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
+	                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
+	            </div>
+	            <div class="row">
+	                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
+	                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
+	                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
+	            </div>
+	            <div class="row">
+	                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
+	                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
+	                <div class="col-lg-4 col-md-6">随便看看<br/><br/><br/><br/><br/><br/></div>
+	            </div>
+	        </div>
+	    </div> -->
+	</div>  <%-- <div id="content" class="row">--%>  
+</div> <%--<div class="container-fluid text-center" style="width:96%;"> --%>
 

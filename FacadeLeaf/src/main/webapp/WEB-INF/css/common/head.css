@@ -26,10 +26,10 @@
     background:url(/static/images/common/head.jpg) no-repeat center 0;
 }
 .icons_option {
-	background:url(/static/images/icons/option_normal.png) no-repeat 10% center;
+	background:url(/static/images/icons/utility.png) no-repeat 5% center;
 }
 .icons_option:hover {
-    background-image:url(/static/images/icons/option_hover.png);
+    background-image:url(/static/images/icons/utility_hover.png);
     color:white;
 }
 .navbar {
